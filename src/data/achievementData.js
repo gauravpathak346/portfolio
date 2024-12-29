@@ -1,7 +1,9 @@
-import eightImage from "../../src/assets/svg/projects/eight.svg";
+import clientImage from "../../src/assets/svg/projects/client.svg";
+import leaderImage from "../../src/assets/svg/projects/leader.svg";
+import managementImage from "../../src/assets/svg/projects/management.svg";
 
 export const achievementData = {
-  bio: "Putting quantified achievements...",
+  bio: "Consistently delivered innovative technical solutions that met client needs, leading to high satisfaction and repeat business. Played a key role in improving project efficiency and ensuring timely delivery.Led successful platform integrations, enhancing operational processes and user experience, while driving impactful changes to improve overall workflow and project outcomes.",
   achievements: [
     {
       id: 1,
@@ -9,8 +11,7 @@ export const achievementData = {
       details: "Promoted to Team Lead...",
       date: "July 2024",
       field: "Leadership",
-      image:
-        "https://www.shutterstock.com/image-vector/team-leader-vector-icon-260nw-1936261131.jpg",
+      image: leaderImage,
     },
     {
       id: 2,
@@ -18,16 +19,15 @@ export const achievementData = {
       details: "Streamlined the development process...",
       date: "March 2024",
       field: "Process Improvement",
-      image:
-        "https://www.shutterstock.com/image-vector/process-optimization-icon-vector-260nw-1936261132.jpg",
+      image: managementImage,
     },
     {
       id: 3,
       title: "Client Appreciation",
-      details: "Received recognition from an international client...",
+      details: "Received recognition from an international clients...",
       date: "January 2024",
       field: "Client Relations",
-      image: eightImage,
+      image: clientImage,
     },
   ],
 };
