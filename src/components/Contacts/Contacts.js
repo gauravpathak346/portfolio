@@ -125,7 +125,7 @@ function Contacts() {
       if (isEmail(email)) {
         try {
           // Construct the email body
-          const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+          const emailBody = `Message:${message}`;
 
           // Open default email client
           window.location.href = `mailto:gauravpathak346@gmail.com?subject=Contact from ${encodeURIComponent(
@@ -170,7 +170,7 @@ function Contacts() {
                   Name
                 </label>
                 <input
-                  placeholder="Gaurav Pathak"
+                  placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   type="text"
@@ -183,7 +183,7 @@ function Contacts() {
                   Email
                 </label>
                 <input
-                  placeholder="gauravpathak346@gmail.com"
+                  placeholder="Your Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"

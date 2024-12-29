@@ -1,19 +1,26 @@
 export const skillsData = [
   "Python",
+  "Flask",
+  "Node",
   "GCP",
   "Docker",
+  "React",
+  "Wordpress",
   "Git",
   "MySQL",
+  "Kubernetes",
+  "Zoho",
+  "Shopify",
   "HTML",
   "Figma",
   "Javascript",
   "CSS",
-  "React",
   "Django",
-  "Wordpress",
   "PHP",
   "MongoDB",
   "Tailwind",
+  "Trello",
+  "Jira",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

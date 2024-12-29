@@ -1,5 +1,12 @@
 import gcp from "../assets/svg/skills/gcp.svg";
 import html from "../assets/svg/skills/html.svg";
+import jira from "../assets/svg/skills/jira.svg";
+import trello from "../assets/svg/skills/trello.svg";
+import node from "../assets/svg/skills/node.svg";
+import zoho from "../assets/svg/skills/zoho.svg";
+import flask from "../assets/svg/skills/flask.svg";
+import shopify from "../assets/svg/skills/shopify.svg";
+import kubernetes from "../assets/svg/skills/kubernetes.svg";
 import photoshop from "../assets/svg/skills/photoshop.svg";
 import illustrator from "../assets/svg/skills/illustrator.svg";
 import docker from "../assets/svg/skills/docker.svg";
@@ -226,6 +233,20 @@ export const skillsImage = (skill) => {
       return wolframalpha;
     case "canva":
       return canva;
+    case "flask":
+      return flask;
+    case "jira":
+      return jira;
+    case "trello":
+      return trello;
+    case "zoho":
+      return zoho;
+    case "shopify":
+      return shopify;
+    case "kubernetes":
+      return kubernetes;
+    case "node":
+      return node;
     default:
       break;
   }

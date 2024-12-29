@@ -1,8 +1,8 @@
 export const aboutData = {
   title: "Who I am",
   description1:
-    "Hi, I'm Gaurav, a passionate developer with a knack for solving complex problems and building innovative solutions. With expertise in Python, JavaScript, Flask, and Django, I specialize in creating robust APIs, integrating systems, and enhancing user experiences. ",
+    "Hi, I’m Gaurav! I believe in simplicity and reliability. Whether building digital solutions or solving problems, I focus on making things work efficiently and seamlessly. With expertise in Python, JavaScript, Flask, and Django, I specialize in creating APIs, integrating systems, and improving user experiences.",
   description2:
-    "Outside of coding, I love playing badminton, caring for plants, immersing myself in novels, and exploring new video games. My free time is spent experimenting with photography and cooking, and I’m constantly learning new skills to fuel my creativity and innovation.",
+    "When I’m not coding, I recharge by reading, exploring tech trends, or taking walks to clear my mind. I also enjoy travelling, games, and constantly learning new skills to fuel my creativity. I’m always looking for ways to improve how we interact with the digital world.",
   image: 2,
 };
