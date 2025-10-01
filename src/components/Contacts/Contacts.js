@@ -3,6 +3,7 @@ import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import isEmail from "validator/lib/isEmail";
 import { makeStyles } from "@material-ui/core/styles";
+import emailjs from "emailjs-com";
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -27,6 +28,7 @@ function Contacts() {
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
   const [errMsg, setErrMsg] = useState("");
+  const [sending, setSending] = useState(false);
 
   const { theme } = useContext(ThemeContext);
 
@@ -36,7 +38,6 @@ function Contacts() {
   };
 
   const useStyles = makeStyles((t) => ({
-    // ... (keeping all your existing styles unchanged)
     input: {
       border: `4px solid ${theme.primary80}`,
       backgroundColor: `${theme.secondary}`,
@@ -123,27 +124,48 @@ function Contacts() {
 
     if (name && email && message) {
       if (isEmail(email)) {
-        try {
-          // Construct the email body
-          const emailBody = `Message:${message}`;
+        setSending(true);
 
-          // Open default email client
-          window.location.href = `mailto:gauravpathak346@gmail.com?subject=Contact from ${encodeURIComponent(
-            name
-          )}&body=${encodeURIComponent(emailBody)}`;
+        // EmailJS template parameters
+        const templateParams = {
+          from_name: name,
+          from_email: email,
+          reply_to: email,
+          to_email: "gauravpathk348@gmail.com",
+          message: message,
+        };
 
-          // Show success message and reset form
-          setSuccess(true);
-          setTimeout(() => {
-            setName("");
-            setEmail("");
-            setMessage("");
-            setSuccess(false);
-          }, 2000);
-        } catch (error) {
-          setErrMsg("Failed to open email client");
-          setOpen(true);
-        }
+        // Send email using EmailJS
+        emailjs
+          .send(
+            "service_qd6udru", // Replace with your EmailJS service ID
+            "template_yzno9no", // Replace with your EmailJS template ID
+            templateParams,
+            "dBE4dYNC1I1RkCmDo" // Replace with your EmailJS public key
+          )
+          .then((response) => {
+            console.log(
+              "Email sent successfully!",
+              response.status,
+              response.text
+            );
+            setSuccess(true);
+            setSending(false);
+
+            // Reset form after 2 seconds
+            setTimeout(() => {
+              setName("");
+              setEmail("");
+              setMessage("");
+              setSuccess(false);
+            }, 2000);
+          })
+          .catch((error) => {
+            console.error("Failed to send email:", error);
+            setErrMsg("Failed to send message. Please try again.");
+            setOpen(true);
+            setSending(false);
+          });
       } else {
         setErrMsg("Invalid email");
         setOpen(true);
@@ -176,6 +198,7 @@ function Contacts() {
                   type="text"
                   name="Name"
                   className={`form-input ${classes.input}`}
+                  disabled={sending}
                 />
               </div>
               <div className="input-container">
@@ -189,6 +212,7 @@ function Contacts() {
                   type="email"
                   name="Email"
                   className={`form-input ${classes.input}`}
+                  disabled={sending}
                 />
               </div>
               <div className="input-container">
@@ -202,12 +226,17 @@ function Contacts() {
                   type="text"
                   name="Message"
                   className={`form-message ${classes.message}`}
+                  disabled={sending}
                 />
               </div>
 
               <div className="submit-btn">
-                <button type="submit" className={classes.submitBtn}>
-                  <p>{!success ? "Send" : "Sent"}</p>
+                <button
+                  type="submit"
+                  className={classes.submitBtn}
+                  disabled={sending}
+                >
+                  <p>{sending ? "Sending..." : !success ? "Send" : "Sent"}</p>
                   <div className="submit-icon">
                     <AiOutlineSend
                       className="send-icon"

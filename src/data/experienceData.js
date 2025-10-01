@@ -3,7 +3,7 @@ export const experienceData = [
     id: 1,
     company: "Sprilio Tech",
     jobtitle: "SDE-2",
-    startYear: "July-2024",
+    startYear: "July-2025",
     endYear: "Present",
   },
   {
@@ -11,7 +11,7 @@ export const experienceData = [
     company: "Sprilio Tech",
     jobtitle: "SDE-1",
     startYear: "July-2023",
-    endYear: "July-2024",
+    endYear: "July-2025",
   },
   {
     id: 3,

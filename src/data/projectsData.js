@@ -22,12 +22,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    projectName: "Transcriber",
+    projectName: "Textpal",
     projectDesc:
-      "A doctor-patient platform that records consultations and generates detailed AI-driven reports for medical analysis. \n\n December-2024 to Present",
-    tags: ["Flask (Python)", "React.js", "Open AI", "Google Cloud Platform"],
-    demo: "https://transcriber.com/",
-    image: two,
+      "Developed TextPal, an AI assistant enabling text/SMS interactions using ChatGPT, Anthropic Claude, MCP, LangChain, vector DB, React.js, and Node.js. \n \n Feb 2025 to Present",
+    tags: ["Python", "Google Cloud Plateform"],
+    demo: "https://fftp-cognizn.web.app/",
+    image: six,
   },
   {
     id: 3,
@@ -51,11 +51,11 @@ export const projectsData = [
 
   {
     id: 5,
-    projectName: "Textpal - ChatGPT",
+    projectName: "Transcriber",
     projectDesc:
-      "An AI-powered SMS-based service that allows users to interact with ChatGPT for offline queries. \n \nJune-2024 to Sept-2024",
-    tags: ["Node.js", "ChatGPT API", "Twilio"],
-    demo: "",
-    image: six,
+      "A doctor-patient platform that records consultations and generates detailed AI-driven reports for medical analysis. \n\n December-2024 to Present",
+    tags: ["Flask (Python)", "React.js", "Open AI", "Google Cloud Platform"],
+    demo: "https://transcriber.com/",
+    image: two,
   },
 ];
