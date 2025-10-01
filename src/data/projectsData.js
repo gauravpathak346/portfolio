@@ -25,8 +25,13 @@ export const projectsData = [
     projectName: "Textpal",
     projectDesc:
       "Developed TextPal, an AI assistant enabling text/SMS interactions using ChatGPT, Anthropic Claude, MCP, LangChain, vector DB, React.js, and Node.js. \n \n Feb 2025 to Present",
-    tags: ["Python", "Google Cloud Plateform"],
-    demo: "https://fftp-cognizn.web.app/",
+    tags: [
+      "Anthropic Claude",
+      "ChatGPT",
+      "LangChain",
+      "Google Cloud Plateform",
+    ],
+    demo: "",
     image: six,
   },
   {

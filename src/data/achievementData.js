@@ -9,7 +9,7 @@ export const achievementData = {
       id: 1,
       title: "Team Lead",
       details: "Promoted to Team Lead...",
-      date: "July 2024",
+      date: "July 2025",
       field: "Leadership",
       image: leaderImage,
     },
